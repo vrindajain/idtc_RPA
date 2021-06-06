@@ -1,0 +1,4 @@
+﻿Process started at: 06/06/2021  04:03:03.1436783
+Data Processed in Sheet 1
+Data for Negative Feedback filtered
+Process ended at: 06/06/2021  04:04:05.3840462
