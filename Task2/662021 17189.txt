@@ -1,0 +1,7 @@
+﻿Process started at: 06/06/2021  17:18:09.7587121
+Total mails Processed: 20
+English mails Processed: 5
+Hindi mails Processed: 5
+French mails Processed: 5
+Russian mails Processed: 5
+Process ended at: 06/06/2021  17:19:41.5376510

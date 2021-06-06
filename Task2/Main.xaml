@@ -1,0 +1,405 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="714,3528" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="43">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.MLServices.Enums</x:String>
+      <x:String>UiPath.MLServices.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="480.666666666667,922.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FileName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Create Log File" sap:VirtualizedContainerService.HintSize="438.666666666667,329.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[FileName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[now.Day.ToString + now.Month.ToString + now.Year.ToString + " " + now.Hour.ToString + now.Minute.ToString + now.Second.ToString + ".txt"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:CreateFile ContinueOnError="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="334,135.333333333333" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[FileName]" Path="Task2" />
+    </Sequence>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="438.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Message" xml:space="preserve">["Process started at: " + now.Date.ToShortDateString+"  " +now.TimeOfDay.ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_FileName">[FileName]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,307.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:Int32" Name="EngMails" />
+            <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="EmailMsgs" />
+            <Variable x:TypeArguments="sd:DataTable" Name="OutputData" />
+            <Variable x:TypeArguments="x:Int32" Name="FrenchMails" />
+            <Variable x:TypeArguments="x:Int32" Name="RussianMails" />
+            <Variable x:TypeArguments="x:Int32" Name="HindiMails" />
+            <Variable x:TypeArguments="x:Int32" Name="TotalMails" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[EmailMsgs]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="30" />
+          <ui:BuildDataTable DataTable="[OutputData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Sender_x0020_Name&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;500&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Email_x0020_Subject&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;700&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Email_x0020_Body&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;2000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Sentiment&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Confidence&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;30&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Email_x0020_Time&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[EmailMsgs]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="snm:MailMessage">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="msg" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="392,874" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Body" />
+                    <Variable x:TypeArguments="x:String" Name="JOut" />
+                    <Variable x:TypeArguments="njl:JObject" Name="JObject" />
+                    <Variable x:TypeArguments="x:String" Name="language" />
+                    <Variable x:TypeArguments="x:String" Name="sentiment" />
+                    <Variable x:TypeArguments="x:String" Name="confidence" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Body]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[msg.Body.ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Body]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[Body.Trim()]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <uma:MLSkills ApiKey="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SkillURL="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" Connection="Robot" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="350,52.6666666666667" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[Body]" JsonResponse="[JOut]" NextPageNum="2" RefreshList="False" TotalCount="3">
+                    <uma:MLSkills.MLSkillList>
+                      <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
+                        <x:Reference>__ReferenceID0</x:Reference>
+                        <um:MLSkill AccessUri="https://ai-uipath.deskover.com/mlskills/f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3/e0fa4702-0c9b-4d0a-bf43-ed562e857e46/sentiment-analysis" AccountId="f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3" Description="" Id="58eb3fb7-43f2-4b55-a6f0-6860e8aee67e" InputDescription="Text to be analyzed.&#xA;For example: &quot;I am dissatisfied with this service.&quot;" InputType="JSON" Name="Sentiment_Analysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;&#xA;For example:  '{&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}'" ProjectId="18fc8cd4-251e-48ec-a1b2-1507b181ee8e" TenantId="e0fa4702-0c9b-4d0a-bf43-ed562e857e46" />
+                        <um:MLSkill AccessUri="https://ai-uipath.deskover.com/mlskills/f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3/e0fa4702-0c9b-4d0a-bf43-ed562e857e46/sentiment-analysis-skill" AccountId="f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3" Description="" Id="93761070-fd8c-4cf6-ae70-57350e89af72" InputDescription="Text to be analyzed.&#xA;For example: &quot;I am dissatisfied with this service.&quot;" InputType="JSON" Name="Sentiment_Analysis_Skill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;&#xA;For example:  '{&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}'" ProjectId="9a1804c2-1738-45f5-b449-02fa39c7fd0c" TenantId="e0fa4702-0c9b-4d0a-bf43-ed562e857e46" />
+                      </scg:List>
+                    </uma:MLSkills.MLSkillList>
+                    <uma:MLSkills.SelectedMLSkill>
+                      <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath.deskover.com/mlskills/f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3/e0fa4702-0c9b-4d0a-bf43-ed562e857e46/language-detection" AccountId="f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3" Description="" Id="b0fa8cf4-77be-4ec7-873c-94e925bfe6a4" InputDescription="Text to be analyzed.&#xA;For example:&#xA;&quot;Necesito ayuda con mi pedido.&quot;" InputType="JSON" Name="Language_Detection" OutputDescription="JSON with prediction of the language.&#xA;Output will be a prediction for the input's language along with a confidence of that prediction.&#xA;{&#xA;    &quot;language&quot;:&quot;Spanish&quot;, &#xA;    &quot;confidence&quot;: 1.0&#xA;}" ProjectId="18fc8cd4-251e-48ec-a1b2-1507b181ee8e" TenantId="e0fa4702-0c9b-4d0a-bf43-ed562e857e46" />
+                    </uma:MLSkills.SelectedMLSkill>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uma:MLSkills>
+                  <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[JObject]" JsonString="[JOut]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[language]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[JObject("language").ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[language]" sap:VirtualizedContainerService.HintSize="350,52.6666666666667" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign x:Key="Hindi" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_13">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[HindiMails]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[HindiMails+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign x:Key="French" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[FrenchMails]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[FrenchMails+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign x:Key="Russian" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[RussianMails]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[RussianMails+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Sequence x:Key="English" sap:VirtualizedContainerService.HintSize="392,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uma:MLSkills ApiKey="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SkillURL="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" Connection="Robot" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="350,52.6666666666667" sap2010:WorkflowViewState.IdRef="MLSkills_3" Item="[Body]" JsonResponse="[JOut]" NextPageNum="2" RefreshList="False" TotalCount="3">
+                        <uma:MLSkills.MLSkillList>
+                          <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
+                            <um:MLSkill AccessUri="https://ai-uipath.deskover.com/mlskills/f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3/e0fa4702-0c9b-4d0a-bf43-ed562e857e46/language-detection" AccountId="f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3" Description="" Id="b0fa8cf4-77be-4ec7-873c-94e925bfe6a4" InputDescription="Text to be analyzed.&#xA;For example:&#xA;&quot;Necesito ayuda con mi pedido.&quot;" InputType="JSON" Name="Language_Detection" OutputDescription="JSON with prediction of the language.&#xA;Output will be a prediction for the input's language along with a confidence of that prediction.&#xA;{&#xA;    &quot;language&quot;:&quot;Spanish&quot;, &#xA;    &quot;confidence&quot;: 1.0&#xA;}" ProjectId="18fc8cd4-251e-48ec-a1b2-1507b181ee8e" TenantId="e0fa4702-0c9b-4d0a-bf43-ed562e857e46" />
+                            <x:Reference>__ReferenceID1</x:Reference>
+                            <um:MLSkill AccessUri="https://ai-uipath.deskover.com/mlskills/f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3/e0fa4702-0c9b-4d0a-bf43-ed562e857e46/sentiment-analysis-skill" AccountId="f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3" Description="" Id="93761070-fd8c-4cf6-ae70-57350e89af72" InputDescription="Text to be analyzed.&#xA;For example: &quot;I am dissatisfied with this service.&quot;" InputType="JSON" Name="Sentiment_Analysis_Skill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;&#xA;For example:  '{&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}'" ProjectId="9a1804c2-1738-45f5-b449-02fa39c7fd0c" TenantId="e0fa4702-0c9b-4d0a-bf43-ed562e857e46" />
+                          </scg:List>
+                        </uma:MLSkills.MLSkillList>
+                        <uma:MLSkills.SelectedMLSkill>
+                          <um:MLSkill x:Name="__ReferenceID1" AccessUri="https://ai-uipath.deskover.com/mlskills/f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3/e0fa4702-0c9b-4d0a-bf43-ed562e857e46/sentiment-analysis" AccountId="f7c85e9f-9b7b-4c71-a935-f7f62ad1d3d3" Description="" Id="58eb3fb7-43f2-4b55-a6f0-6860e8aee67e" InputDescription="Text to be analyzed.&#xA;For example: &quot;I am dissatisfied with this service.&quot;" InputType="JSON" Name="Sentiment_Analysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;&#xA;For example:  '{&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}'" ProjectId="18fc8cd4-251e-48ec-a1b2-1507b181ee8e" TenantId="e0fa4702-0c9b-4d0a-bf43-ed562e857e46" />
+                        </uma:MLSkills.SelectedMLSkill>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uma:MLSkills>
+                      <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[JObject]" JsonString="[JOut]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_16">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[sentiment]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[JObject("sentiment").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_17">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[confidence]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[JObject("confidence").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{msg.Sender.ToString,msg.Subject.ToString,msg.Body.ToString, sentiment, confidence,msg.DateAsDateTime.ToShortTimeString}]" DataTable="[OutputData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="350,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                      <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_18">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[EngMails]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[EngMails+1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </Switch>
+                  <Assign sap:VirtualizedContainerService.HintSize="350,62" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[TotalMails]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[TotalMails+1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:MoveOutlookMessage Account="{x:Null}" DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="350,86.6666666666667" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1" MailFolder="[language]" MailMessage="[msg]" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+          <ui:WriteRange AddHeaders="True" DataTable="[OutputData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Output.xlsx">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:WriteRange>
+          <Sequence DisplayName="logging" sap:VirtualizedContainerService.HintSize="334,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Total Mails - Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Message">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Total mails Processed: &quot; + TotalMails.ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FileName">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileName" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="English Mails - Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Message">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;English mails Processed: &quot; + EngMails.ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FileName">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileName" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Hindi Mails - Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Message">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Hindi mails Processed: &quot; + HindiMails.ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FileName">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileName" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="French Mails - Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Message">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;French mails Processed: &quot; + FrenchMails.ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FileName">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileName" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Russian Mails - Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Message">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Russian mails Processed: &quot; + RussianMails.ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FileName">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileName" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Message">["Process ended at: " + Now.TimeOfDay.ToString + ": with error " + exception.ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FileName">[FileName]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogFile workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="LogFile.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="In_Message" xml:space="preserve">["Process ended at: " + now.Date.ToShortDateString+ "  " +now.TimeOfDay.ToString]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="In_FileName">[FileName]</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
